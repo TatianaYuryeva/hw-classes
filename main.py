@@ -23,7 +23,7 @@ class Lecturer(Mentor):
         grades_list = []
         for grade in lecturer_grades:
             grades_list.extend(grade)
-        return (round(sum(grades_list) / len(grades_list)), 2)
+        return round(sum(grades_list) / len(grades_list), 2)
 
 
 class Student:
@@ -49,7 +49,7 @@ class Student:
         grades_list = []
         for grade in student_grades:
             grades_list.extend(grade)
-        return (round(sum(grades_list) / len(grades_list)), 2)
+        return round(sum(grades_list) / len(grades_list), 2)
 
     def __str__(self):
         res = f'Имя: {self.name} \nФамилия: {self.surname} \nСредняя оценка за домашние задания: {self.avg_grade()} \nКурсы в процессе изучения: {self.courses_in_progress} \nЗавершенные курсы: {first_student.finished_courses}'
